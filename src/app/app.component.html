@@ -1,8 +1,13 @@
-<div class="container">
+<div class="container mt-5">
   <h1>Directives</h1>
   <hr>
   <h3 *ngIf="!status">ngIf Calismiyor</h3>
   <h3 *ngIf="status">ngIf Calisiyor</h3>
 
-  <button class="btn btn-info" (click)="changeStatus()">Chage Status</button>
+  <button class="btn btn-info mt-3" (click)="changeStatus()">Chage Status</button>
+<hr>
+<h2>Ng if-else</h2>
+<h3 *ngIf="status; else id_selector">Status:true</h3>
+
+<ng-template #id_selector><h3>Status:false</h3></ng-template>
 </div>
