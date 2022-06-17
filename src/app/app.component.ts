@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularDirectives';
+  status:boolean=false;
+
+  changeStatus(){
+    this.status=!this.status
+  }
 }
