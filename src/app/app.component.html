@@ -5,9 +5,18 @@
   <h3 *ngIf="status">ngIf Calisiyor</h3>
 
   <button class="btn btn-info mt-3" (click)="changeStatus()">Chage Status</button>
-<hr>
-<h2>Ng if-else</h2>
-<h3 *ngIf="status; else id_selector">Status:true</h3>
+  <hr>
+  <h2>Ng if-else</h2>
+  <h3 *ngIf="status; else id_selector">Status:true</h3>
 
-<ng-template #id_selector><h3>Status:false</h3></ng-template>
+  <ng-template #id_selector>
+    <h3>Status:false</h3>
+  </ng-template>
 </div>
+<hr>
+<h2>ngFor with index</h2>
+<ul>
+  <li *ngFor="let item of itemList;let i=index;">
+    <b>{{i+1}}</b> {{item.name}} {{item.surname}}
+  </li>
+</ul>
